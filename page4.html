@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ゆっくり実況「はる」- 公式サイト</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.0/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick-theme.min.css">
+    <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.js"></script>
+
+    <style>
+        /*ページ全体の構成*/
+        body{
+            background: #fff;
+            color: #444444;
+            font-size: 16px;
+            font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Helvetica, Arial, 'ＭＳ Ｐゴシック', sans-serif;
+            line-height: 1.42857;
+            margin: 0;
+        }
+        a:link {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        /* ヘッダー */
+        .header {
+            z-index: 100;
+            padding: 24px 0;
+            width: 100%;
+            border-bottom: #ccd1d9 solid 1px;
+            background: #64646c;
+            color: #333;
+        }
+        .header-group{
+            max-width: 960px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .header-groupTitle {
+            color:#fff;
+            margin: 0;
+            font-size: 2.4em;
+            padding-right: 20px;
+        }
+        .header-groupDescription {
+            color: #fff;
+        }
+        /*画面サイズ960px以下のヘッダースタイル*/
+        @media screen and (max-width : 960px){
+            .header{
+                padding: 24px 0px;
+            }
+            .header-groupTitle,
+            .header-groupDescription{
+                margin-left: 20px;
+            }
+        }
+        /* ナビゲーション */
+        .section-nav {
+            max-width: 960px;
+            height: auto;
+            margin: 0 auto;
+            padding: 21px 0 0;
+            background: #fff;
+            text-align: center;
+        }
+        .section-navGroup {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+        .section-navGroup > li {
+            list-style-type: none;
+        }
+        .section-navGroup > li a {
+            display: block;
+            padding: 6px 12px;
+            color: #333;
+            text-decoration: none;
+        }
+        .section-navGroup > li a:hover {
+            color: #999;
+        }
+        .section-navGroup > li a.active {
+            border-bottom: #333 solid 2px;
+            color: #999;
+        }
+        /*画面サイズ600px以下のナビスタイル*/
+        @media screen and (max-width :960px){
+            .section-navGroup{
+                margin: 0 auto;
+                padding: 0 20px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                text-align: center;
+            }
+            .section-navGroup > li{
+                border: 1px solid #ccc;
+                margin-bottom: 5px;
+                min-width: 100%;
+                list-style-type: none;
+            }
+        }
+        /*　スライドイメージ */
+        .mainImg{
+            margin-bottom: 80px;
+        }
+        /*スライドイメージ > スライダーの設定*/
+        .slider{
+        margin: 0 auto 80px;
+        padding: 0;
+        max-width: 960px;
+        height: auto;
+        }
+        .slider img{
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;'; /*IE対策*/
+        }
+        .slick-initialized,
+        .slick-slide{
+            max-height: 500px !important;
+        }
+        .slick-next,
+        .slick-prev{
+            display: none !important;
+        }
+        /*スライダー両サイドの矢印*/
+        .slick-prev:before,
+        .slick-next:before {
+            color: #64646c;
+        }
+        /*画面サイズ600px以下のスライダースタイル*/
+        @media screen and (max-width : 960px){
+            .section{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .mainImg{
+                margin-bottom:0 ;
+            }
+            .slider img{
+                height: 280px;
+                width: 100%;
+                object-fit: cover;
+                font-family: 'object-fit: cover;'; /*IE対策*/
+            }
+        }
+        /*メインコンテンツ*/
+        .article {
+            max-width: 960px;
+            height: auto;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .article-group {
+            width: 31%;
+            margin: 20px 0;
+            height: auto;
+        }
+        .article-group > a{
+            color: #333333;
+        }
+        .article-group > a :hover{
+            color: #999;
+        }
+        /*メインコンテンツのイメージ*/
+        .article-groupImg{
+            width: 100%;
+        }
+        /*メインコンテンツのタイトル部分*/
+        .article-groupTitle {
+            margin: 10px 0;
+            padding: 10px 0;
+            border-bottom: 1px dotted #444;
+            text-align: center;
+            font-weight: bold;
+        }
+        /*960px以下の画面の中間概要部分のスタイル*/
+        @media screen and (max-width :960px){
+            .article{
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            .article-group{
+                width: 100%;
+                height:auto;
+            }
+            .article-groupDiscription{
+                text-align: center;
+            }
+        }
+        /*更新情報*/
+        .news {
+            max-width: 960px;
+            margin: 0 auto 50px;
+        }
+        .news-list {
+            list-style: none;
+            padding: 0;
+        }
+        .news-list > li {
+            margin: 10px 0;
+            padding: 10px 0;
+            border-bottom: 1px dotted #444;
+        }
+        .news-list > li > a{
+            color: #333333;
+        }
+        /*960px以下の画面の中間概要部分のスタイル*/
+        @media(max-width: 960px){
+            .news{
+                padding: 20px;
+            }
+        }
+        /*更新年月日*/
+        .news-listDate {
+            color: #c5c5c5;
+            margin-right: 20px;
+        }
+        /*自己紹介*/
+        .profile{
+            background: #f2f2f2;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #919191;
+        }
+        .profile-wrap{
+            max-width:960px;
+            margin: 0 auto;
+        }
+        .profile-wrapGroup{
+            width: 100%;
+            margin: 0 auto;
+            padding: 50px 0 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        /*自己紹介－画像部分*/
+        .profile-wrapGroupImg{
+            width: 20%;
+        }
+        .profile-wrapGroupImg > img{
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            font-family: 'object-fit: cover;'; /*IE対策*/
+        }
+        /*自己紹介-本文*/
+        .profile-wrapGroupBody{
+            background: #fff;
+            border-radius: 15px;
+            max-width: 65%;
+            padding: 10px 30px 20px;
+            margin-bottom: 20px;
+        }
+        .profile-wrapGroupBody-name{
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-bottom: 1px solid #f2f2f2;
+            padding-bottom: 10px;
+        }
+        @media(max-width: 960px){
+            .profile{
+                padding-bottom: 0;
+            }
+            .profile-wrapGroup{
+                display: block
+            }
+            .profile-wrapGroupImg{
+                width: 50%;
+                margin: 0 auto 20px;
+                text-align: center;
+            }
+            .profile-wrapGroupBody{
+                width: 80%;
+                margin: 0 auto 20px;
+            }
+        }
+        /*SNSボタン*/
+        .profile-wrapGroupSNSicon{
+            max-width: 960px;
+            margin-left: auto;
+        }
+        .profile-wrapGroupSNSicon-group{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+        /*SNSボタン-色サイズ*/
+        .snsIcon{
+            width: 48px;
+            margin: 0 0 0 10px;
+        }
+        @media(max-width: 960px){
+            .profile-wrapGroupSNSicon{
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .profile-wrapGroupSNSicon-group{
+                justify-content: center;
+            }
+        }
+        /*注釈権利*/
+        .footer{
+            background: #f2f2f2;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 12px;
+        }
+        /*ボタン*/
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: black;
+  font-size: 65%;
+  font-family: sans-serif;
+}
+
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: gray;
+}
+
+      p {
+        font-weight: bolder;
+      }
+
+      input {
+        width: 300px;
+      }
+
+      #name {
+        margin-left: 115px;
+        margin-bottom: 10px;
+      }
+
+      #email {
+        margin-left: 35px;
+        margin-bottom: 10px;
+      }
+
+      #phone {
+        margin-left: 83px;
+        margin-bottom: 10px;
+      }
+
+      .content {
+        position: relative;
+      }
+
+      .content-label {
+        top: 0;
+        left: 0;
+      }
+
+      #content {
+        margin-top: 7px;
+        margin-left: 153px;
+        height: 200px;
+        width: 350px;
+      }
+
+      .button {
+        margin-top: 30px;
+        width: 550px;
+        text-align: center;
+      }
+
+      button {
+        width: 130px;
+        height: 30px;
+        border: none;
+        background-color: gray;
+        color: white;
+        font-size: 113%;
+        font-family: MS ゴシック;
+      }
+
+
+.btn--gray,
+a.btn--gray {
+  color: white;
+  background-color: gray;
+  font-size: 65%;
+  font-family: sans-serif;
+}
+
+.btn--gray:hover,
+a.btn--gray:hover {
+  color: white;
+  background: gray;
+}
+      
+      
+      
+      
+      
+      
+.OTForm {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+@media screen and (max-width: 480px) {
+  .OTForm {
+    margin-top: 40px;
+  }
+}
+.Form-Item {
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+}
+.Form-Item:nth-child(5) {
+
+}
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 15px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+  }
+}
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label.isMsg {
+    margin-top: 0;
+  }
+}
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #545454;
+  color: #fff;
+  font-size: 10px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Label-Required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 8px;
+  }
+}
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 13px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 13px;
+  }
+}
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 15px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item-Textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 13px;
+  }
+}
+.Form-Btn {
+        border: none;
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 230px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: gray;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+}
+@media screen and (max-width: 480px) {
+  .Form-Btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
+}
+      
+      
+    </style>
+</head>
+
+<body  link="white" vlink="white" alink="white">
+<div class="header">
+<div class="header-group">
+<h1 class="header-groupTitle"><span style="font-size: 24pt;">ゆっくり実況「はる」</span></h1>
+<p class="header-groupDescription">YouTubeのゆっくり実況者</p>
+</div>
+</div>
+<div class="section">
+<div class="section-nav">
+<ul class="section-navGroup">
+<li><a href="https://yukkuriharu.web.fc2.com/index.html">ホーム</a></li>
+<li><a href="https://yukkuriharu.web.fc2.com/page2.html">チャンネルについて</a></li>
+<li><a href="https://yukkuriharu.web.fc2.com/page3.html">動画班など</a></li>
+<li><span style="text-decoration: underline;"><a href="https://yukkuriharu.web.fc2.com/page4.html">お問い合わせ</a></span></li>
+</ul>
+<div class="article">
+<h2 class="news-title">お問い合わせ</h2>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="news"><form>
+<p><em><span style="text-decoration: underline;"><span style="color: #ff0000; text-decoration: underline;"><strong><span style="font-size: 14pt; font-family: serif;">※現在、システムエラーによりお問い合わせフォームが使用できません。</span></strong></span></span></em><br /><em><span style="text-decoration: underline;"><span style="color: #ff0000; text-decoration: underline;"><strong><span style="font-size: 14pt; font-family: serif;">お手数おかけしますが、メールまたはDMにてご連絡お願いします。</span></strong></span></span></em></p>
+<div>
+<p><span style="font-size: 12pt;">お問い合わせフォーム</span></p>
+<div class="OTForm">
+<div class="Form-Item">
+<p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
+<input type="text" class="Form-Item-Input" placeholder="例）はる" /></div>
+<div class="Form-Item">
+<p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+<input type="email" class="Form-Item-Input" placeholder="例）yukkuri.jikkyou.haru@gmail.com" /></div>
+<div class="Form-Item">
+<p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+<textarea class="Form-Item-Textarea"></textarea></div>
+<input type="submit" class="Form-Btn" value="送信する" /></div>
+</div>
+<div class="news"></div>
+<div class="news"></div>
+<div class="news">★TwitterのDMでもお問い合わせ可能です！</div>
+<div class="news"><span style="font-size: 14pt;"><a href="https://twitter.com/yukkuri_haruuu/" class="btn btn--gray"><b>Twitter</b></a></span></div>
+<div class="news">
+<div class="news">★公式LINEでもお問い合わせ可能です！</div>
+<div class="news"><span style="font-size: 14pt;"><a href="https://line.me/R/ti/p/@946qcckf" class="btn btn--gray"><b>LINE@</b></a></span></div>
+<div class="news">★TwitterのDMでもお問い合わせ可能です！</div>
+<div class="news"><span style="font-size: 14pt;"><a href="https://yukkuriharu.web.fc2.com/mail.html" class="btn btn--gray"><b>&nbsp;メール&nbsp;</b></a></span></div>
+Twitter：@yukkuri_haruuu<br />Mail：yukkuri.jikkyou.haru@gmail.com</div>
+<div class="news"></div>
+<div class="news"></div>
+<div class="news"><span style="font-size: 18pt;"><a href="https://www.youtube.com/@yukkuri_haru" class="btn btn--orange"><b>YouTubeチャンネルへ</b></a></span></div>
+<div class="news"></div>
+<div class="profile">
+<div class="profile-wrap">
+<div class="profile-wrapGroup">
+<div class="profile-wrapGroupImg"><img src="https://yukkuriharu.web.fc2.com/icon.jpg" alt="" width="180" height="180" /></div>
+<div class="profile-wrapGroupBody">
+<p class="profile-wrapGroupBody-name">ゆっくり実況「はる」</p>
+<div class="profile-wrapGroupBody-discription">はじめまして！</div>
+<div class="profile-wrapGroupBody-discription">YouTubeでゆっくり実況をやっている「はる」と申します。　　　　　　　　　　　　　　　　　</div>
+<div class="profile-wrapGroupBody-discription">チャンネル登録していただけると嬉しいです。</div>
+<div class="profile-wrapGroupBody-discription">応援、よろしくお願いします</div>
+</div>
+<div class="profile-wrapGroupSNSicon">
+<ul class="profile-wrapGroupSNSicon-group">
+<li><a href="#"></a><a href="https://www.youtube.com/@yukkuri_haru"><img src="https://yukkuriharu.web.fc2.com/145-1450088_youtube-logo-png-circle.png" class="snsIcon" alt="youtube" width="48" height="48" /></a><a href="https://twitter.com/yukkuri_haruuu/"><img src="https://yukkuriharu.web.fc2.com/twitter-icone-1.png" class="snsIcon" alt="Twitter" width="48" height="48" /></a></li>
+<li><a href="https://www.tiktok.com/@yukkuri.jikkyou.haru"><img src="https://yukkuriharu.web.fc2.com/Tiktok-Logo-Application-Tiktok-Icon-Tiktok-Logo-6338430.png" class="snsIcon" alt="Instagram" width="48" height="48" /></a></li>
+<li><a href="#"></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="footer-text">ホームページに関する注意事項など入ります</div>
+<div class="footer-copyright">Copyright &copy; yukkuri.haru</div>
+</div>
+<!--スライダー-->
+<p>
+<script>
+    $('.slider').slick({
+        autoplay:true,
+        autoplaySpeed:8000,
+        dots:true,
+    });
+    </script>
+</p>
+<!--objedt-fit（IE対策）-->
+<p>
+<script src="//cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+<script>objectFitImages();</script>
+</p>
+</form></div>
+</body>
+</html>
