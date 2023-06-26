@@ -625,17 +625,18 @@ a.btn--gray:hover {
 <p><span style="font-size: 12pt;">お問い合わせフォーム</span></p>
 <div class="OTForm">
 <div class="Form-Item">
+<form action="https://api.staticforms.xyz/submit" method="post">
+　　　　<input type="hidden" name="accessKey" value="80ed2cce-d38f-4467-99a6-827a40cbf198">
 <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
-<input type="text" class="Form-Item-Input" placeholder="例）はる"/></div>
+<input type="text" class="Form-Item-Input" name="name" placeholder="例 ）はる"/></div>
 <div class="Form-Item">
 <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
-<input type="email" class="Form-Item-Input" placeholder="例）yukkuri.jikkyou.haru@gmail.com" /></div>
+<input type="email" class="Form-Item-Input" name=”email” placeholder="例）yukkuri.jikkyou.haru@gmail.com" /></div>
 <div class="Form-Item">
 <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-<textarea class="Form-Item-Textarea"></textarea></div>
+<textarea class="Form-Item-Textarea" name=”message”></textarea></div>
+<input type="hidden" name="redirectTo" value="https://youtube.com">
 <input type="submit" class="Form-Btn" value="送信する" /></div>
-<input type="hidden" name="accessKey" value="80ed2cce-d38f-4467-99a6-827a40cbf198">
-<input type="hidden" name="redirectTo" value="https://yukkuri-haru.github.io/haru/page4.form.html">
 </div>
 <div class="news"></div>
 <div class="news"></div>
